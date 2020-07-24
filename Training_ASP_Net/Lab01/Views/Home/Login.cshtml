@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+    <div class="row">
+        <form class="form-horizontal col" action="/Home/Login" method="post">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend class="alert alert-info">Form Name</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="us">Username</label>
+                    <div class="col-md-4">
+                        <input id="us" name="us" type="text" placeholder="Input username" class="form-control input-md" required="">
+                        <span class="help-block">Enter username</span>
+                    </div>
+                </div>
+
+                <!-- Password input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="pw">Password Input</label>
+                    <div class="col-md-4">
+                        <input id="pw" name="pw" type="password" placeholder="Input password" class="form-control input-md" required="">
+                        <span class="help-block">password please</span>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="btLogin"></label>
+                    <div class="col-md-4">
+                        <button id="btLogin" class="btn btn-success">Login</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>

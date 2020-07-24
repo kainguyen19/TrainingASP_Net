@@ -4,4 +4,78 @@
 
 <div class="row">
     <h1 class="col">Welcome to website of UEH</h1>
+    <ul>
+        <li>
+            <a href="/Home/GetProductWithID/1">Product 01 detail</a>
+        </li>
+        <li>
+            <a href="/Home/GetProductWithID/2">Product 02 detail</a>
+        </li>
+    </ul>
+</div>
+<div class="row">
+    <form class="form-horizontal col" action="/Home/GetProductWithName" method="get">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Form Name</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="keyword">Keyword:</label>
+                <div class="col-md-6">
+                    <input id="keyword" name="keyword" type="text" placeholder="Input keyword for searching" class="form-control input-md" required="">
+                    <span class="help-block">enter keyword</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btnSubmit"></label>
+                <div class="col-md-4">
+                    <button id="btnSubmit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+</div>
+
+<div class="row">
+    <form class="form-horizontal col" action="/Home/Search" method="get">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend class="alert alert-success">Searing</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="keyword">Keyword:</label>
+                <div class="col-md-6">
+                    <input id="keyword" name="keyword_1 " type="text" placeholder="Input keyword for searching" class="form-control input-md" required="">
+                    <span class="help-block">enter keyword</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="keyword">Category:</label>
+                <div class="col-md-6">
+                    <input id="keyword" name="keyword_2" type="text" placeholder="Input keyword for searching" class="form-control input-md" required="">
+                    <span class="help-block">enter keyword</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btnSubmit"></label>
+                <div class="col-md-4">
+                    <button id="btnSubmit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
 </div>

@@ -13,3 +13,8 @@
 => DetailProduct => idProduct
 
 ## 2. Send multiple parameter to Server
+* GET method:
+    * https://domain/controller/action?para_1=value_1&para_2=value_2
+* POST method:
+    * https://domain/controller/action
+        * Parameter is hidden
