@@ -262,6 +262,10 @@
     <Content Include="Content\fonts\themify.ttf" />
     <Content Include="Content\fonts\themify.woff" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\_LayoutPartial\_Header.cshtml" />
+    <Content Include="Views\Shared\_LayoutPartial\_Preloder.cshtml" />
+    <Content Include="Views\Shared\_LayoutPartial\_HeroSession.cshtml" />
+    <Content Include="Views\Shared\_LayoutPartial\_Footer.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
