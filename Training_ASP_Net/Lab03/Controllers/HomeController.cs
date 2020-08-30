@@ -12,5 +12,10 @@ namespace Lab3.Controllers
         {
             return View();
         }
+
+        public ActionResult ShowInfo()
+        {
+            return View();
+        }
     }
 }
