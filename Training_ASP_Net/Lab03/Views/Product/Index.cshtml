@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Lab3.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="row">Product management</h2>
+
+<div class="row">
+    @Html.ActionLink("Add new product", "create", null, new { @class = "btn btn-primary" })
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Thumbs</th>
+            <th scope="col">Product name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Age</th>
+            <th scope="col">Is actived</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td scope="col">@item.ID</td>
+                <td scope="col">
+                    <img src="~/Content/img/products/@item.ThumbnailURL" height="50" />
+                </td>
+                <td scope="col">@item.Name</td>
+                <td scope="col">@item.Price</td>
+                <td scope="col">@item.Category.Name</td>
+                <td scope="col">@item.Brand.Name</td>
+                <td scope="col">@item.Age.Name</td>
+                <td scope="col">
+                    @if (item.IsActive == true)
+                    {
+                        @Html.ActionLink("Actived", "setActive", new { id = item.ID }, new { @class = "btn btn-warning" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("De-Actived", "setActive", new { id = item.ID }, new { @class = "btn btn-dark" })
+                    }
+                </td>
+                <td scope="col">
+                    @Html.ActionLink("Delete", "delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+                    @Html.ActionLink("Edit", "edit", new { id = item.ID }, new { @class = "btn btn-success" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

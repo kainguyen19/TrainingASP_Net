@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Lab3.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="col">Categories management</h2>
+
+@Html.ActionLink("Create new Category", "Create", null, new { @class = "btn btn-primary" })
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category name</th>
+            <th scope="col">Is actived</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <th scope="row">@category.ID</th>
+                <td>@category.Name</td>
+                <td>
+                    @Html.CheckBox("IsActive", (bool)category.IsActive, new { @class = "form-check-input", @readonly = "readonly" })
+                </td>
+                <td>
+                    @if (category.IsActive == true)
+                    {
+                        @Html.ActionLink("De-active", "SetActive", new { id = category.ID }, new { @class = "btn btn-primary" })
+
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Active", "SetActive", new { id = category.ID }, new { @class = "btn btn-success" })
+                    }
+                    @Html.ActionLink("Delete", "Delete", new { id = category.ID }, new { @class = "btn btn-danger" })
+                    @Html.ActionLink("Edit", "Edit", new { id = category.ID }, new { @class = "btn btn-info" })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -17,8 +17,10 @@
     <!-- Header Section Begin -->
     @{ Html.RenderPartial("_LayoutPartial/_Header"); }
     <!-- Header End -->
-
-    @RenderBody()
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+    
 
     <!-- Footer Section Begin -->
     @{ Html.RenderPartial("_LayoutPartial/_Footer"); }

@@ -31,5 +31,9 @@ namespace Lab3.Models
         public virtual DbSet<Image> Images { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+
+        public System.Data.Entity.DbSet<Lab3.ViewModels.CategoryViewModel> CategoryViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<Lab3.ViewModels.ProductsViewModel> ProductsViewModels { get; set; }
     }
 }
