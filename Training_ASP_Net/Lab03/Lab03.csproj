@@ -170,7 +170,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CategoryViewModel.cs" />
-    <Compile Include="ViewModels\ProductsViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\bootstrap.min.css" />
@@ -242,6 +242,7 @@
     <Content Include="Content\img\product-single\thumb-1.jpg" />
     <Content Include="Content\img\product-single\thumb-2.jpg" />
     <Content Include="Content\img\product-single\thumb-3.jpg" />
+    <Content Include="Content\img\products\balo_embe.jpg" />
     <Content Include="Content\img\products\man-1.jpg" />
     <Content Include="Content\img\products\man-2.jpg" />
     <Content Include="Content\img\products\man-3.jpg" />
@@ -339,6 +340,7 @@
     <Content Include="Views\Category\Edit.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Product\create.cshtml" />
+    <Content Include="Views\Product\edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

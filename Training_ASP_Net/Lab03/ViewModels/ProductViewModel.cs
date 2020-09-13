@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Lab3.ViewModels
 {
-    public class ProductsViewModel
+    public class ProductViewModel
     {
         public int ID { get; set; }
 

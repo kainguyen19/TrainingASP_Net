@@ -34,6 +34,6 @@ namespace Lab3.Models
 
         public System.Data.Entity.DbSet<Lab3.ViewModels.CategoryViewModel> CategoryViewModels { get; set; }
 
-        public System.Data.Entity.DbSet<Lab3.ViewModels.ProductsViewModel> ProductsViewModels { get; set; }
+        public System.Data.Entity.DbSet<Lab3.ViewModels.ProductViewModel> ProductsViewModels { get; set; }
     }
 }
