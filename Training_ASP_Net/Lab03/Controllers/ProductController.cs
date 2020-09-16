@@ -89,6 +89,9 @@ namespace Lab3.Controllers
                 product.CreatedAt = DateTime.Now;
                 product.UpdatedAt = DateTime.Now;
 
+                product.Viewes = 0;
+                product.Sales = 0;
+
                 db.Products.Add(product);
                 db.SaveChanges();
 

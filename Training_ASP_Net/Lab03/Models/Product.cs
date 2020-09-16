@@ -33,6 +33,8 @@ namespace Lab3.Models
         public Nullable<System.DateTime> UpdatedAt { get; set; }
         public string ThumbnailURL { get; set; }
         public string ImageURL { get; set; }
+        public Nullable<int> Sales { get; set; }
+        public Nullable<int> Viewes { get; set; }
     
         public virtual Age Age { get; set; }
         public virtual Brand Brand { get; set; }
