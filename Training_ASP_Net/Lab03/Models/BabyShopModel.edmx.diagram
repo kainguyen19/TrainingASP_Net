@@ -15,6 +15,12 @@
         <AssociationConnector Association="BabyShopModel.FK_Product_Brand" ManuallyRouted="false" />
         <AssociationConnector Association="BabyShopModel.FK_Product_Category" ManuallyRouted="false" />
         <AssociationConnector Association="BabyShopModel.FK_Image_Product" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BabyShopModel.Order" Width="1.5" PointX="6" PointY="9.25" />
+        <EntityTypeShape EntityType="BabyShopModel.OrderDetail" Width="1.5" PointX="8.25" PointY="2.25" />
+        <EntityTypeShape EntityType="BabyShopModel.OrderStatu" Width="1.5" PointX="3.75" PointY="9.625" />
+        <AssociationConnector Association="BabyShopModel.FK_Order_OrderStatus" />
+        <AssociationConnector Association="BabyShopModel.FK_OrderDetail_Order" />
+        <AssociationConnector Association="BabyShopModel.FK_OrderDetail_Product" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

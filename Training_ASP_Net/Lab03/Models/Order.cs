@@ -12,36 +12,21 @@ namespace Lab3.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class Order
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Product()
+        public Order()
         {
-            this.Images = new HashSet<Image>();
             this.OrderDetails = new HashSet<OrderDetail>();
         }
     
         public int ID { get; set; }
-        public string Name { get; set; }
-        public Nullable<int> Price { get; set; }
-        public string Detail { get; set; }
-        public Nullable<int> CategoryID { get; set; }
-        public Nullable<int> BrandID { get; set; }
-        public Nullable<int> AgeID { get; set; }
-        public Nullable<bool> IsActive { get; set; }
-        public Nullable<bool> IsDelete { get; set; }
+        public Nullable<int> TotalPrice { get; set; }
         public Nullable<System.DateTime> CreatedAt { get; set; }
         public Nullable<System.DateTime> UpdatedAt { get; set; }
-        public string ThumbnailURL { get; set; }
-        public string ImageURL { get; set; }
-        public Nullable<int> Sales { get; set; }
-        public Nullable<int> Viewes { get; set; }
+        public Nullable<int> OrderStatusID { get; set; }
     
-        public virtual Age Age { get; set; }
-        public virtual Brand Brand { get; set; }
-        public virtual Category Category { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Image> Images { get; set; }
+        public virtual OrderStatu OrderStatu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }

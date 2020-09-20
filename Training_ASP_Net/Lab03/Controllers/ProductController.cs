@@ -18,6 +18,17 @@ namespace Lab3.Controllers
             List<Product> products = db.Products.Where(p => p.IsDelete == false).ToList<Product>();
             return View(products);
         }
+
+        public ActionResult Detail(int id)
+        {
+            Product product = db.Products.Single(p => p.ID == id);
+            
+            product.Viewes++;
+            db.SaveChanges();
+
+            return View(product);
+        }
+
         public ActionResult setActive(int id)
         {
             Product product = db.Products.Single(p => p.ID == id);

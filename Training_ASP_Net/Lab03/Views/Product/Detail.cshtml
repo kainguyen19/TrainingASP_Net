@@ -1,0 +1,61 @@
+﻿@model Lab3.Models.Product
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail of Product</h2>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="product-pic-zoom" style="position: relative; overflow: hidden;">
+            <img class="product-big-img" src="/Content/img/products/@Model.ThumbnailURL" alt="">
+            <div class="zoom-icon">
+                <i class="fa fa-search-plus"></i>
+            </div>
+            <img role="presentation" alt="" src="/Content/img/products/@Model.ThumbnailURL" class="zoomImg" style="position: absolute; top: -11.5464px; left: -25.3823px; opacity: 0; width: 440px; height: 520px; border: none; max-width: none; max-height: none;">
+        </div>
+        <div class="product-thumbs">
+            <div class="product-thumbs-track ps-slider owl-carousel owl-loaded owl-drag">
+                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-139px, 0px, 0px); transition: all 1.2s ease 0s; width: 559px;"><div class="owl-item" style="width: 129.583px; margin-right: 10px;"><div class="pt active" data-imgbigurl="img/product-single/product-1.jpg"><img src="img/product-single/product-1.jpg" alt=""></div></div><div class="owl-item active" style="width: 129.583px; margin-right: 10px;"><div class="pt" data-imgbigurl="img/product-single/product-2.jpg"><img src="img/product-single/product-2.jpg" alt=""></div></div><div class="owl-item active" style="width: 129.583px; margin-right: 10px;"><div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img src="img/product-single/product-3.jpg" alt=""></div></div><div class="owl-item active" style="width: 129.583px; margin-right: 10px;"><div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img src="img/product-single/product-3.jpg" alt=""></div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fa fa-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="fa fa-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="product-details">
+            <div class="pd-title">
+                <span>@Model.Brand.Name</span>
+                <h3>@Model.Name</h3>
+                <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
+            </div>
+            <div class="pd-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <span>(5)</span>
+            </div>
+            <div class="pd-desc">
+                <p>
+                    @Model.Detail
+                </p>
+                <h4>$@Model.Price</h4>
+            </div>
+            <div class="quantity">
+                <a href="/ShoppingCart/Add/@Model.ID" class="primary-btn pd-cart">Add To Cart</a>
+            </div>
+            <ul class="pd-tags">
+                <li><span>CATEGORIES</span>: @Model.Category.Name</li>
+            </ul>
+            <div class="pd-share">
+                <div class="p-code">Sku : 00012</div>
+                <div class="pd-social">
+                    <a href="#"><i class="ti-facebook"></i></a>
+                    <a href="#"><i class="ti-twitter-alt"></i></a>
+                    <a href="#"><i class="ti-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
