@@ -74,7 +74,7 @@ namespace Lab3.Controllers
                 shoppingCart = (CartViewModel)Session["ShoppingCart"];
             }
 
-            shoppingCart.Update(id, quantity);
+            shoppingCart.Update(id, quantity);      
             Session["ShoppingCart"] = shoppingCart;
             
             return RedirectToAction("Index");
