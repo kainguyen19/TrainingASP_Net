@@ -21,6 +21,11 @@
         <AssociationConnector Association="BabyShopModel.FK_Order_OrderStatus" />
         <AssociationConnector Association="BabyShopModel.FK_OrderDetail_Order" />
         <AssociationConnector Association="BabyShopModel.FK_OrderDetail_Product" />
+        <EntityTypeShape EntityType="BabyShopModel.Role" Width="1.5" PointX="1.5" PointY="13.875" />
+        <EntityTypeShape EntityType="BabyShopModel.User" Width="1.5" PointX="3.75" PointY="13" />
+        <AssociationConnector Association="BabyShopModel.FK_Order_User" />
+        <AssociationConnector Association="BabyShopModel.FK_Order_User1" />
+        <AssociationConnector Association="BabyShopModel.FK_User_Role" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

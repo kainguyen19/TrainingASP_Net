@@ -110,7 +110,7 @@ namespace Lab3.Controllers
             }
             else
             {
-                return View(ModelState);
+                return View(productViewModel);
             }
         }
 
@@ -185,7 +185,7 @@ namespace Lab3.Controllers
             }
             else
             {
-                return View(ModelState);
+                return View(productViewModel);
             }
         }
     }

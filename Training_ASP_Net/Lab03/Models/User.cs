@@ -12,29 +12,31 @@ namespace Lab3.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Order()
+        public User()
         {
-            this.OrderDetails = new HashSet<OrderDetail>();
+            this.Orders = new HashSet<Order>();
+            this.Orders1 = new HashSet<Order>();
         }
     
         public int ID { get; set; }
-        public Nullable<int> TotalPrice { get; set; }
-        public Nullable<System.DateTime> CreatedAt { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string DisplayName { get; set; }
+        public string Telephone { get; set; }
+        public string Address { get; set; }
+        public Nullable<bool> IsActive { get; set; }
+        public Nullable<bool> IsDelete { get; set; }
+        public Nullable<System.DateTime> CeatedAt { get; set; }
         public Nullable<System.DateTime> UpdatedAt { get; set; }
-        public Nullable<int> OrderStatusID { get; set; }
-        public Nullable<int> UserID { get; set; }
-        public Nullable<int> SellerID { get; set; }
-        public string ShippingName { get; set; }
-        public string ShippingTel { get; set; }
-        public string ShippingAddress { get; set; }
+        public Nullable<int> RoleID { get; set; }
     
-        public virtual OrderStatu OrderStatu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
-        public virtual User User { get; set; }
-        public virtual User User1 { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Orders1 { get; set; }
+        public virtual Role Role { get; set; }
     }
 }
