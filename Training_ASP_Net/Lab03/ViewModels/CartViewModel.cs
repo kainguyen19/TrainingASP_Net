@@ -10,10 +10,12 @@ namespace Lab3.ViewModels
     public class CartViewModel
     {
         public List<CartItemViewModel> carts { get; set; }
+        public int totalPrice { get; set; }
 
         public CartViewModel()
         {
             this.carts = new List<CartItemViewModel>();
+            this.totalPrice = 0;
         }
 
         public void Add(Product p)
@@ -22,6 +24,7 @@ namespace Lab3.ViewModels
             {
                 CartItemViewModel cart = new CartItemViewModel(p);
                 this.carts.Add(cart);
+                this.totalPrice += (int)p.Price;
             }
             else
             {
@@ -30,6 +33,7 @@ namespace Lab3.ViewModels
                     if (c.product.ID == p.ID)
                     {
                         c.quantity++;
+                        this.totalPrice += (int)p.Price;
                         return;
                     }
                 }
@@ -37,6 +41,7 @@ namespace Lab3.ViewModels
                 // add new product to cart
                 CartItemViewModel cart = new CartItemViewModel(p);
                 this.carts.Add(cart);
+                this.totalPrice += (int)p.Price;
             }
         }
 
@@ -53,7 +58,12 @@ namespace Lab3.ViewModels
             foreach(CartItemViewModel cart in this.carts)
             {
                 if (cart.product.ID == productID)
+                {
+                    this.totalPrice -= ((int)cart.product.Price * cart.quantity);
                     cart.quantity = quantity;
+                    this.totalPrice += ((int)cart.product.Price * cart.quantity);
+                    return;
+                }
             }
         }
 
@@ -64,6 +74,7 @@ namespace Lab3.ViewModels
                 if(cart.product.ID == productID)
                 {
                     this.carts.Remove(cart);
+                    this.totalPrice -= ((int)cart.product.Price * cart.quantity);
                     return;
                 }
             }

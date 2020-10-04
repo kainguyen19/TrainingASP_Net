@@ -48,6 +48,13 @@
 <div class="row justify-content-between">
     <div class="col-4 alert alert-primary">Total price: @ViewBag.TotalPrice </div>
     <div class="col-1">
-        @Html.ActionLink("Checkout", "CheckOut", null, new { @class = "btn btn-success" })
+        @if (Session["ShoppingCart"] != null && Model.carts.Count > 0)
+        {
+            @Html.ActionLink("Checkout", "CheckOut", null, new { @class = "btn btn-success" })
+        }
+        else
+        {
+            <div class="btn btn-dark">Checkout</div>
+        }
     </div>
 </div>

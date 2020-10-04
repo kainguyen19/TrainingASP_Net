@@ -392,6 +392,10 @@
     <Content Include="Views\Shared\_LayoutPartial\_Login.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\SignUp.cshtml" />
+    <Content Include="Views\Shared\_LayoutPartial\_Logined.cshtml" />
+    <Content Include="Views\Shared\_LayoutPartial\_ShoppingCartPanel.cshtml" />
+    <Content Include="Views\ShoppingCart\CheckOut.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

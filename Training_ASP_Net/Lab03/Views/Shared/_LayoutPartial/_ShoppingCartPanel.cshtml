@@ -1,0 +1,33 @@
+﻿@using Lab3.ViewModels
+
+<div class="col-lg-3 text-right col-md-3">
+    <ul class="nav-right">
+        <li class="cart-icon">
+            <a href="/ShoppingCart/Index">
+                <i class="icon_bag_alt"></i>
+                    @if (Session["ShoppingCart"] == null)
+                    {
+                        <span>0</span>                        
+                    }
+                    else
+                    {
+                        <span>
+                            @((Session["ShoppingCart"] as CartViewModel).carts.Count)
+                        </span>
+                    }
+            </a>
+        </li>
+        <li class="cart-price">
+            @if (Session["ShoppingCart"] == null)
+            {
+                <span>$0.00</span>
+            }
+            else
+            {
+                <span>
+                    $@((Session["ShoppingCart"] as CartViewModel).totalPrice).00
+                </span>
+            }
+        </li>
+    </ul>
+</div>
